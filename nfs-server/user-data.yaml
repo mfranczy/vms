@@ -1,0 +1,21 @@
+#cloud-config
+hostname: nfs-server
+fqdn: nfs-server
+
+users:
+  - default
+system_info:
+  default_user:
+    name: ubuntu
+    home: /home/ubuntu
+    lock_passwd: false
+password: ubuntu
+chpasswd:
+  expire: false
+ssh_pwauth: true
+
+package_update: true
+packages:
+  - xterm
+  - nfs-server
+
